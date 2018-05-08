@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<script>
+	 var a=0;
+	 var t;
+	 var timer_is_on=0;
+ function timedCount(){
+
+	 document.getElementById("nub").value=a;
+	 a=a+1;
+	 
+	 t=setTimeout("timedCount()",1000);
+ }
+function stoptime(){
+	clearTimeout(t);
+	document.getElementById("nub").value=0;
+	}
+</script>
+</head>
+<body>
+<button type="button" onClick="timedCount()">点我</button>
+<input type="text" id="nub">
+<button type="button" onClick="stoptime()">点我</button>
+</body>
+</html>
